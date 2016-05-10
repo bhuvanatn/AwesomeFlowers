@@ -1,0 +1,33 @@
+// Place all the styles related to the occasions controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.thumb {
+  width: 250px;
+  height: 187px;
+}
+.thumbAdmin {
+  width: 100px;
+  height: auto;
+}
+.itemInfo{
+  clear: both;
+}
+body {
+    background-color: lightblue;
+}
+// .container {
+//  max-width: 960px;
+//  margin: 0 auto;
+// }
+// .addGiftLink{
+//  color: green !important;
+// }
+.addGiftPanel {
+  // display: none;
+}
+
+.giftTable{
+float: left
+
+}

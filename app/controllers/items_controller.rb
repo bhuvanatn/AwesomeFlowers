@@ -1,0 +1,41 @@
+class ItemsController < ApplicationController
+  def new
+    @item = Item.new
+
+  end
+
+  def index
+    @item = Item.all
+  end
+
+  def create
+      item = Item.create item_params
+      redirect_to items_path
+    end
+
+    def update
+      item = Item.find params[:id]
+      item.update item_params
+      redirect_to items_path
+    end
+
+    def edit
+      @item = Item.find params[:id]
+    end
+
+    def show
+      @item = Item.find params[:id]
+      @gifts = Item.where(:kind => 'Gift')
+    end
+
+    def destroy
+      item = Item.find params[:id]
+      item.destroy
+      redirect_to items_path
+    end
+
+    private
+    def item_params
+      params.require(:item).permit(:name, :description, :image, :price, :kind)
+    end
+  end

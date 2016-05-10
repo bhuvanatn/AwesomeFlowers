@@ -1,0 +1,15 @@
+<h1>
+    All Occasions</h1>
+    <div class="col-md-4 col-md-offset-2">
+        <%= link_to 'New Occasion', new_occasion_path %>
+<br>
+<br>
+    <% @occasion.each do |occ| %>
+    <div class="form-group">
+        <%= occ.name %> |
+            <%= link_to 'Show', occ %>
+            <%= link_to 'Edit', edit_occasion_path(occ) %>
+            <%= link_to 'Delete', occ, method: :delete, data: { confirm: 'Are you sure?' } %>
+    </div>
+<% end %>
+</div>

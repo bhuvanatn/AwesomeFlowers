@@ -1,0 +1,21 @@
+<!-- <h1><%= @occasion.name %></h1> -->
+
+<div class="container">
+  <% @occasion.items.each do |item| %>
+  <% if (item.kind =='Flowers') %>
+  <div class="row">
+    <div class="col-md-3">
+      <%= link_to image_tag(item.image, :class => 'thumb'), item %>
+      <div class="itemInfo">
+          <%= item.name %>
+          <%= item.price %>
+      </div>
+    </div>
+    <% end %><!--end for if loop -->
+  <% end %><!--end for each loop -->
+  </div><!-- close row -->
+</div><!-- close container -->
+
+
+<!-- # <%= link_to 'Edit Occasion', edit_occasion_path(@occasion) %>
+# <%= link_to 'Delete Occasion', @occasion, :method => :delete %> -->

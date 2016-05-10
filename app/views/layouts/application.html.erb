@@ -6,8 +6,21 @@
         <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
         <%= csrf_meta_tags %>
     </head>
+    <style>
+    .topnav{
+      margin-bottom: -1px !important;
+    }
+    .navbar.center .navbar-collapse {
+        text-align: center;
+    }
+
+    .navbar.center .navbar-collapse .nav {
+        display:inline-block;
+        float: none;
+    }
+    </style>
     <body>
-    <nav class="navbar navbar-default">
+    <nav class="navbar navbar-default topnav">
       <div class="container-fluid">
         <div class="navbar-header">
             <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
@@ -17,20 +30,41 @@
             </button>
             <a class="navbar-brand" href="#">Awesome Florist</a>
         </div>
+
       <div id="navbar" class="navbar-collapse collapse">
           <ul class="nav navbar-nav">
-              <li><%= link_to 'Home', root_path, class: "active" %></li>
-              <li> <%= link_to "Sign up", signup_path %></li>
-              <li> <%= link_to "Login", login_path %> </li>
+          <li class="<%= 'active' if current_page?(root_path) %>"><%= link_to 'Home', root_path %></li>
+          <% if @current_user.present? %>
+            <% if @current_user.admin? %>
+             <li class="<%= 'active' if current_page?(occasions_path) %>"><%= link_to "Occasion", occasions_path %></li>
+             <li class="<%= 'active' if current_page?(items_path) %>"><%= link_to "Item", items_path %></li>
+            <% end %>
+            <li class="<%= 'active' if current_page?(login_path) %>"><%= link_to "Logout #{ @current_user.email }", login_path, :method => :delete %></li>
+          <% else %>
+
+            <li class="<%= 'active' if current_page?(signup_path) %>"><%= link_to "Sign up", signup_path %></li>
+        <li class="<%= 'active' if current_page?(login_path) %>"><%= link_to "Login", login_path %></li>
+          <% end %>
           </ul>
           <ul class="nav navbar-nav navbar-right">
-              <li> <a href="./">AWF</a> </li>
+              <li> Cart: <div id="cartCount"></div> </li>
           </ul>
       </div>
             <!--/.nav-collapse -->
-</div>
+    </div>
         <!--/.container-fluid -->
     </nav>
+
+    <nav class="navbar navbar-default center">
+      <div id="navbar-occasion" class="navbar-collapse collapse">
+      <ul class="nav navbar-nav">
+        <% Occasion.all.each  do |occ| %>
+          <li class="<%= 'active' if current_page?(occ) %>"><%= link_to occ.name, occasion_path(occ.id) %></li>
+        <% end %>
+      </ul>
+
+    </nav>
+
         <% if flash[:error].present? %>
         <h2 class="error">
             <%= flash[:error] %>

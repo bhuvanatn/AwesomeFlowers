@@ -1,12 +1,43 @@
 Rails.application.routes.draw do
-  get 'session/new'
 
+  # get 'lineitem/index'
+  #
+  # get 'lineitem/edit'
+  #
+  # get 'lineitem/show'
+  #
+  # get 'lineitem/update'
+  #
+  # get 'lineitem/create'
+  #
+  # get 'lineitem/new'
+  #
+  # get 'lineitem/destroy'
+
+  # get 'cart/index'
+  #
+  # get 'cart/edit'
+  #
+  # get 'cart/show'
+  #
+  # get 'cart/update'
+  #
+  # get 'cart/create'
+  #
+  # get 'cart/new'
+  #
+  # get 'cart/destroy'
+
+  resources :items, :occasions, :pages, :lineitem, :cart
    root :to => 'pages#welcome'
   resources :users, :only => [:new, :create]
   get '/signup' => 'users#new'
-
   get '/login' => 'session#new'
   post '/login' => 'session#create'
+  delete '/login' => 'session#destroy'
+
+
+
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
