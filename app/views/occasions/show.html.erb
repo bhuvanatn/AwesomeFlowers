@@ -1,15 +1,20 @@
 <!-- <h1><%= @occasion.name %></h1> -->
 
 <div class="container">
+  <div class="row">
   <% @occasion.items.each do |item| %>
   <% if (item.kind =='Flowers') %>
-  <div class="row">
+
     <div class="col-md-3">
       <%= link_to image_tag(item.image, :class => 'thumb'), item %>
-      <div class="itemInfo">
-          <%= item.name %>
-          <%= item.price %>
-      </div>
+      <span class="label label-info fontSize">
+          <div class="itemInfo">
+              <%= item.name %>
+              <%= item.price %>
+          </div>
+      </span>
+      <br>
+      <br>
     </div>
     <% end %><!--end for if loop -->
   <% end %><!--end for each loop -->

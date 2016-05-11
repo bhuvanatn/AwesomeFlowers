@@ -5,6 +5,7 @@
 .thumb {
   width: 250px;
   height: 187px;
+  border-radius: 100px;
 }
 .thumbAdmin {
   width: 100px;
@@ -16,6 +17,18 @@
 body {
     background-color: lightblue;
 }
+.addToCartButton{
+
+}
+.cartDisplay{
+  display: inline;
+  float:left;
+}
+.lineItem > img{
+  width: 70px;
+  height: 70px;
+  border-radius: 10px;
+}
 // .container {
 //  max-width: 960px;
 //  margin: 0 auto;
@@ -26,8 +39,44 @@ body {
 .addGiftPanel {
   // display: none;
 }
-
+.fontSize{
+  font-size: 15px;
+  float:left;
+  margin-bottom: 20px;
+}
 .giftTable{
 float: left
+
+}
+#cartCount{
+  margin-left: 10px;
+}
+#idcartDisplay{
+  display: inline-flex;
+}
+
+// div.scHeading{
+// width: 100%;
+// }
+
+ span.scContainer{
+   clear: both;
+ }
+
+.lineItem {
+   margin-bottom: 1em;
+ }
+
+#shoppingCartView{
+  //max-height: 300px;
+/* overflow: scroll; */
+display: inline-flex;
+max-width: 460px;
+//background-color: #eeeeee;
+padding: 20px;
+//display:none;
+}
+
+#titleQuantity{
 
 }

@@ -1,2 +1,5 @@
-<h1>Lineitem#show</h1>
-<p>Find me in app/views/lineitem/show.html.erb</p>
+
+<h2>Your Pragmatic Cart</h2> <ul>
+<% @cart.lineitems.each do |itm| %>
+<li><%= itm.quantity %> &times; <%= itm.item_id.price %></li>
+<% end %> </ul>

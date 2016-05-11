@@ -12,4 +12,16 @@ class Cart < ActiveRecord::Base
     current_item
   end
 
+def total_price
+  lineitems.to_a.sum do |item|
+    item.total_price
+  end
+end
+
+def total_items
+  lineitems.to_a.sum do |item|
+    item.quantity
+  end
+end
+
 end

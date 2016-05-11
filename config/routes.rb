@@ -1,33 +1,5 @@
 Rails.application.routes.draw do
 
-  # get 'lineitem/index'
-  #
-  # get 'lineitem/edit'
-  #
-  # get 'lineitem/show'
-  #
-  # get 'lineitem/update'
-  #
-  # get 'lineitem/create'
-  #
-  # get 'lineitem/new'
-  #
-  # get 'lineitem/destroy'
-
-  # get 'cart/index'
-  #
-  # get 'cart/edit'
-  #
-  # get 'cart/show'
-  #
-  # get 'cart/update'
-  #
-  # get 'cart/create'
-  #
-  # get 'cart/new'
-  #
-  # get 'cart/destroy'
-
   resources :items, :occasions, :pages, :lineitem, :cart
    root :to => 'pages#welcome'
   resources :users, :only => [:new, :create]

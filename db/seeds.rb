@@ -34,7 +34,7 @@ i3 = Item.create :name => 'Lily', :description => 'Wow', :image => 'http://cdn1.
 i31 = Item.create :name => 'Lily', :description => 'Wow', :image => 'http://www.flowersforeveryone.com.au/images/products/large/pastel-pink-lush-bouquet-flower-bouquets.jpg', :price => 50, :kind => 'Flowers'
 i32 = Item.create :name => 'Lily', :description => 'Wow', :image => 'http://www.flowerslink.com.au/images/Mix-tiger-lily.jpg', :price => 50, :kind => 'Flowers'
 
-i6 = Item.create :name => 'TiddyBear', :description => 'Wow', :image => 'http://www.goodlightscraps.com/content/teddy-bear/teddy-bear-7.jpg', :price => 50, :kind =>'Gift'
+i6 = Item.create :name => 'TeddyBear', :description => 'Wow', :image => 'http://www.goodlightscraps.com/content/teddy-bear/teddy-bear-7.jpg', :price => 50, :kind =>'Gift'
 i7 = Item.create :name => 'Chocolates', :description => 'Wow', :image => 'http://www.olympiacandy.com/uploadmedia/images/milk-chocolate-gift-box-5-lbs-751-L.jpg', :price => 50, :kind =>'Gift'
 i8 = Item.create :name => 'Wine', :description => 'Wow', :image => 'http://www.tanners-wines.co.uk/media/catalog/product/cache/1/image/9df78eab33525d08d6e5fb8d27136e95/z/s/zs1064.jpg', :price => 50, :kind =>'Gift'
 i9 = Item.create :name => 'Ballowns', :description => 'Wow', :image => 'http://teleflora.edgesuite.net/images/products/HW0_258129.jpg', :price => 50, :kind => 'Gift'
