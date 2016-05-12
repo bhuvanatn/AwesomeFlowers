@@ -1,13 +1,15 @@
-<h1>Show Items</h1>
+<!-- <h1>Show Items</h1> -->
 <div class="col-md-4 col-md-offset-2">
     <%= image_tag @item.image, :class => 'thumb' %><br><br>
-
-        <span class="label label-info fontSize">
+        <span class="label label-info occLabelClass">
             <%= @item.name %>
-            <%= @item.price %>
-            <%= link_to "Add Gift", "javascript:;",{  :class => "addGiftLink", :'data-target' => '#addGift', :'data-toggle' => "modal"}%><br>
-        </span><br><br>
-    <button id="btnCart" type="button" class="btn btn-info addToCart" item_id="<%= @item.id %>">Add To Cart</button>
+            $<%= @item.price %>
+            <%= link_to "Add Gift", "javascript:;",{  :class => "addGiftLink", :'data-target' => '#addGift', :'data-toggle' => "modal"}%>
+            <button id="btnCart" type="button" class="btn btn-info addToCart" item_id="<%= @item.id %>">Add To Cart</button>
+            <%= link_to 'Checkout', new_order_path %>
+
+        </span>
+
 
     <% if @current_user.present? && @current_user.admin? %>
         <%= @item.kind %> |
@@ -16,7 +18,8 @@
     <% end %>
 </div>
  <!-- This div is for shoppingCart, this id is called in custom.js -->
-    <div id="shoppingCartView"></div>
+    <div id="shoppingCartView">
+    </div>
 
 
 
@@ -29,18 +32,21 @@
                 <h4 class="modal-title">Add Gift</h4>
             </div>
             <div class="modal-body">
-                <% @gifts.each do |gift| %>
-                <div class="row">
-                    <div class="col-md-3">
-                        <%= image_tag gift.image, :class => 'thumbAdmin' %><br>
-                        <%= gift.name %><br>
-                        <%= gift.price %><br>
-                        <button type="button" class="btn btn-info addToCart" item_id="<%= gift.id %>">Add To Cart</button>
-                    </div>
-                    <div>
 
-                    </div>
+                <div class="container">
+                  <div class="row rowModalPopup">
+
+                    <% @gifts.each do |gift| %>
+                    <div class="col-md-4 colModalPopup">
+                            <%= image_tag gift.image, :class => 'thumbAdmin' %><br>
+                            <%= gift.name %><br>
+                            <%= gift.price %><br>
+                            <button type="button" class="btn btn-info addToCart" item_id="<%= gift.id %>">Add To Cart</button>
+                        </div>
+
                     <% end %>
+                </div>
+            </div>
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>

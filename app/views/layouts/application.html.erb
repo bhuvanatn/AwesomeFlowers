@@ -48,8 +48,9 @@
           </ul>
           <ul class="nav navbar-nav navbar-right">
                  <div id="idcartDisplay" class="cartDisplay">
-                      Cart: Items(s) <div id="cartCount"></div>
-                      $<div id="cartPrice"></div>
+                      Cart:<div id="cartCount"><%= current_cart.total_items %></div> Item<span id="cPlural"></span>
+                      <div id="space"></div>
+                      $<div id="cartPrice"><%= current_cart.total_price %></div>
                 </div>
           </ul>
       </div>
@@ -57,7 +58,7 @@
     </div>
         <!--/.container-fluid -->
     </nav>
-
+<!-- second navbar for All Occasion categories -->
     <nav class="navbar navbar-default center">
       <div id="navbar-occasion" class="navbar-collapse collapse">
       <ul class="nav navbar-nav">
@@ -68,11 +69,17 @@
 
     </nav>
 
-        <% if flash[:error].present? %>
-        <h2 class="error">
-            <%= flash[:error] %>
-        </h2>
-        <% end %>
+    <% if flash[:error].present? %>
+    <h2 class="error">
+        <%= flash[:error] %>
+    </h2>
+    <% end %>
+
+    <% if flash[:notice].present? %>
+    <h2 class="notice">
+        <%= flash[:notice] %>
+    </h2>
+    <% end %>
 
         <%= yield %>
 

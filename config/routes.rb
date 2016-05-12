@@ -1,7 +1,18 @@
 Rails.application.routes.draw do
 
-  resources :items, :occasions, :pages, :lineitem, :cart
-   root :to => 'pages#welcome'
+  # get 'order/index'
+  #
+  # get 'order/new'
+  #
+  # get 'order/create', :as => 'order_create'
+  #
+  # get 'order/update'
+  #
+  # get 'order/destroy'
+
+  resources :items, :occasions, :pages, :lineitem, :cart, :orders, :charges
+
+  root :to => 'pages#welcome'
   resources :users, :only => [:new, :create]
   get '/signup' => 'users#new'
   get '/login' => 'session#new'

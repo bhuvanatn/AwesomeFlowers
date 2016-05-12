@@ -1,25 +1,29 @@
 // Place all the styles related to the occasions controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
-
+@import url(https://fonts.googleapis.com/css?family=Libre+Baskerville:400,400italic);
 .thumb {
   width: 250px;
   height: 187px;
   border-radius: 100px;
+  margin-top: 35px;
 }
 .thumbAdmin {
-  width: 100px;
-  height: auto;
+  width: 80px;
+  height: 80px;
+  border-radius: 20px;
 }
 .itemInfo{
   clear: both;
 }
 body {
+  font-family: 'Libre Baskerville', serif;
     background-color: lightblue;
 }
 .addToCartButton{
 
 }
+
 .cartDisplay{
   display: inline;
   float:left;
@@ -43,21 +47,40 @@ body {
   font-size: 15px;
   float:left;
   margin-bottom: 20px;
+  margin-left: 70px;
+  margin-right: 20px;
+  margin-top: 20px;
 }
 .giftTable{
 float: left
 
 }
 #cartCount{
-  margin-left: 10px;
+  margin-left: 5px;
+  margin-right: 5px;
 }
 #idcartDisplay{
   display: inline-flex;
+  margin-top: 15px;
+margin-right: 10px;
 }
-
+#space{
+  margin-left: 5px;
+}
+.navbar-default .navbar-collapse, .navbar-default .navbar-form{
+  background: snow;
+}
 // div.scHeading{
 // width: 100%;
 // }
+.rowModalPopup{
+margin-right: 180px;
+}
+.colModalPopup{
+  width: 22%;
+  height : 180px;
+}
+
 
  span.scContainer{
    clear: both;
@@ -76,7 +99,14 @@ max-width: 460px;
 padding: 20px;
 //display:none;
 }
-
+.occLabelClass{
+  font-size: 15px;
+  float:left;
+  margin-bottom: 20px;
+  margin-right: 20px;
+  margin-top: 20px;
+  margin-left: -50px;
+}
 #titleQuantity{
 
 }

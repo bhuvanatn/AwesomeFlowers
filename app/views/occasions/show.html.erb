@@ -4,22 +4,21 @@
   <div class="row">
   <% @occasion.items.each do |item| %>
   <% if (item.kind =='Flowers') %>
-
     <div class="col-md-3">
       <%= link_to image_tag(item.image, :class => 'thumb'), item %>
       <span class="label label-info fontSize">
           <div class="itemInfo">
               <%= item.name %>
-              <%= item.price %>
+              $<%= item.price %>
           </div>
       </span>
       <br>
       <br>
     </div>
-    <% end %><!--end for if loop -->
-  <% end %><!--end for each loop -->
-  </div><!-- close row -->
-</div><!-- close container -->
+    <% end %>
+  <% end %>
+  </div>
+</div>
 
 
 <!-- # <%= link_to 'Edit Occasion', edit_occasion_path(@occasion) %>

@@ -1,22 +1,22 @@
-<!-- /*<style>
-.topnav{
-  margin-bottom: -1px !important;
-}
-.navbar.center .navbar-collapse {
-    text-align: center;
-}
 
-.navbar.center .navbar-collapse .nav {
-    display:inline-block;
-    float: none;
-}
-</style>
-<nav class="navbar navbar-default center">
-  <div id="navbar-occasion" class="navbar-collapse collapse">
-  <ul class="nav navbar-nav">
-    <% @occbar.each  do |occ| %>
-      <li><%= link_to occ.name, occasion_path(occ.id) %></li>
+<!--  -->
+
+<div class="container">
+  <div class="row">
+  <% @occasion.items.each do |item| %>
+  <% if (item.kind =='Flowers') %>
+    <div class="col-md-3">
+      <%= link_to image_tag(item.image, :class => 'thumb'), item %>
+      <span class="label label-info fontSize">
+          <div class="itemInfo">
+              <%= item.name %>
+              $<%= item.price %>
+          </div>
+      </span>
+      <br>
+      <br>
+    </div>
     <% end %>
-  </ul>
-
-</nav>*/ -->
+  <% end %>
+  </div>
+</div>

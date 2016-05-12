@@ -1,4 +1,7 @@
 class OccasionsController < ApplicationController
+
+  
+
   def new
     @occasion = Occasion.new
   end
@@ -8,9 +11,7 @@ class OccasionsController < ApplicationController
 
   end
 
-  def imageShow
-      @occasion = Occasion.find params[:id]
-  end
+
 
   def create
       occasion = Occasion.create occasion_params
