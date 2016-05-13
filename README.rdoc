@@ -6,9 +6,13 @@ https://mysterious-thicket-37390.herokuapp.com/
 
 
 Admin :
-UserId: atom@ga.co
-pwd :   ripple
 
-Any User 
-electron@ga.co
-pwd : ripple
+UserId: atom@ga.co
+
+Password :   ripple
+
+User :
+
+UserId :electron@ga.co
+
+Password: ripple
