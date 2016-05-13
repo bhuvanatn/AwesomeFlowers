@@ -2,7 +2,9 @@
 This Application is created in Ruby On Rails, Bootstrap, for payment Stripe Gem.
 
 
-https://mysterious-thicket-37390.herokuapp.com/ .<br>
+https://mysterious-thicket-37390.herokuapp.com/ 
+
+
 Admin :
 UserId: atom@ga.co
 pwd :   ripple
