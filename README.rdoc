@@ -4,7 +4,7 @@ This is e-commerce application for Awesome Florist. Admin can perform CURD opera
 Basically user can signup/login, select flowers, add some gift, then add this to shopping cart and make payment 
 through Stripe.
 
-<a herf="https://mysterious-thicket-37390.herokuapp.com/"> Click here to view </a> 
+<a href="https://mysterious-thicket-37390.herokuapp.com/"> Click here to Awesome Florist </a> 
 
 
 Admin :
