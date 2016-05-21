@@ -1,8 +1,10 @@
 
-This Application is created in Ruby On Rails, Bootstrap, for payment Stripe Gem.
+This Application ibuilt on Ruby On Rails, Bootstrap, Postgres, HTML, CSS, used Stripe Gem for payment.
+This is e-commerce application for Awesome Florist. Admin can perform CURD operation on occassions and items. 
+Basically user can signup/login, select flowers, add some gift, then add this to shopping cart and make payment 
+through Stripe.
 
-
-https://mysterious-thicket-37390.herokuapp.com/ 
+<a herf="https://mysterious-thicket-37390.herokuapp.com/"> Click here to view </a> 
 
 
 Admin :
